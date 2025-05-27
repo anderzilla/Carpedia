@@ -1,29 +1,41 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components/native';
+import { useAppContext, AppProvider } from '../context/AppContext';
+import { themes } from '../themes';
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import styled from 'styled-components/native';
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+function Layout() {
+  const { theme } = useAppContext();
+  const selectedTheme = themes[theme] || themes['chatgpt'];  // ✅ fallback seguro
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <StyledThemeProvider theme={selectedTheme}>
+      <Container>
+        <Stack screenOptions={{ headerShown: false }} />
+        <ThemeSwitcherWrapper>
+          <ThemeSwitcher />
+        </ThemeSwitcherWrapper>
+      </Container>
+    </StyledThemeProvider>
   );
 }
+
+export default function RootLayout() {
+  return (
+    <AppProvider>
+      <Layout />
+    </AppProvider>
+  );
+}
+
+const Container = styled.View`
+  flex: 1;
+`;
+
+const ThemeSwitcherWrapper = styled.View`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;

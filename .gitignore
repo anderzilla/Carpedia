@@ -5,7 +5,9 @@ node_modules/
 
 # Expo
 .expo/
+.expo-shared/
 dist/
+build/
 web-build/
 expo-env.d.ts
 
@@ -37,3 +39,5 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+*.log
