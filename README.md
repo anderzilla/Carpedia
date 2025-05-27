@@ -1,50 +1,135 @@
-# Welcome to your Expo app 👋
+# 🚗 CarPédia
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**CarPédia** é um aplicativo mobile desenvolvido com **React Native** e **Expo** para consulta de informações automotivas.
 
-## Get started
+O projeto consome múltiplas APIs automotivas para fornecer dados sobre:
 
-1. Install dependencies
+* Modelos e marcas de veículos (CarQuery API).
+* Detalhes adicionais via Wikipedia.
+* Informações regulamentares via NHTSA API.
+* Tradução automática com LibreTranslate.
 
-   ```bash
-   npm install
-   ```
+Além disso, o projeto implementa:
 
-2. Start the app
+* **Gerenciamento de estado e cache de requisições** com **React Query**.
+* **Theming** com **styled-components**, com suporte a múltiplos temas: `chatgpt`, `copilot` e `light`.
+* Arquitetura **modularizada** seguindo o princípio **SOLID**.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## ✅ Tecnologias utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* **React Native** com **Expo**
+* **TypeScript**
+* **React Query** (TanStack Query)
+* **Styled-components** para theming
+* **CarQuery API** para dados automotivos
+* **Wikipedia API** para imagens e descrições
+* **NHTSA Vehicle API** para informações de segurança
+* **LibreTranslate API** para tradução
+* **ESLint + Prettier** para padronização de código
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## ✅ Como rodar o projeto localmente
 
-When you're ready, run:
+### **1. Pré-requisitos**
+
+* Node.js (recomendado: versão LTS)
+* Expo CLI instalado globalmente:
 
 ```bash
-npm run reset-project
+npm install -g expo-cli
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+* Conta no [Expo Go](https://expo.dev/) para rodar no celular (opcional)
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+### **2. Clone o repositório**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/anderzilla/Carpedia.git
+cd Carpedia
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### **3. Instale as dependências**
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+yarn install
+```
+
+ou
+
+```bash
+npm install
+```
+
+---
+
+### **4. Rode o projeto com Expo**
+
+```bash
+expo start
+```
+
+➡️ Isso abrirá o **Metro Bundler**.
+➡️ Você pode:
+
+* Escanear o QR Code com o app **Expo Go**.
+* Rodar no emulador Android/iOS.
+* Abrir no **web** com `w` no terminal.
+
+---
+
+## ✅ Estrutura do Projeto
+
+```
+/components         → Componentes reutilizáveis
+/context            → Context API para theming e histórico
+/services           → Camada de serviços para consumo das APIs
+/app                → Navegação e telas principais
+/themes             → Configurações de temas
+```
+
+---
+
+## ✅ Como contribuir
+
+1. Fork o repositório.
+2. Crie uma branch:
+   `git checkout -b feature/sua-feature`
+3. Commit suas alterações:
+   `git commit -m 'feat: minha nova feature'`
+4. Push na branch:
+   `git push origin feature/sua-feature`
+5. Abra um **Pull Request**.
+
+---
+
+## ✅ Contato
+
+Desenvolvido por **Anderson Henrique Gonçalves** ([@anderzilla](https://github.com/anderzilla)) 🚀
+
+---
+
+## ✅ Licença
+
+Este projeto está licenciado sob a **MIT License**.
+
+---
+
+## ✅ Screenshots
+
+*(adicione imagens do app rodando para ilustrar)*
+
+---
+
+## ✅ Status do Projeto
+
+✅ Em desenvolvimento
+✅ Funcionalidades básicas concluídas
+☑️ Planejamento de testes automatizados
+☑️ Deploy em app stores
