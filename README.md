@@ -123,7 +123,11 @@ Este projeto está licenciado sob a **MIT License**.
 
 ## ✅ Screenshots
 
-*(adicione imagens do app rodando para ilustrar)*
+![Carpedia-1](https://github.com/user-attachments/assets/fb5fba6e-31f5-4126-8fed-83b729d3b48a)
+![Carpedia-2](https://github.com/user-attachments/assets/9bfac05b-2141-4db7-b9ee-213f800ec5f5)
+![Carpedia-3](https://github.com/user-attachments/assets/bf4ca421-a0d5-4569-a086-32006763f3c0)
+![Carpedia-4](https://github.com/user-attachments/assets/780d01e8-f720-4f08-a9f9-176069469566)
+
 
 ---
 
