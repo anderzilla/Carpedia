@@ -129,7 +129,8 @@ Este projeto está licenciado sob a **MIT License**.
 
 ## ✅ Status do Projeto
 
-✅ Em desenvolvimento
+✅ Em desenvolvimento  
 ✅ Funcionalidades básicas concluídas
+☑️ Malhorias na estrutura e React Query (Estamos aqui)
 ☑️ Planejamento de testes automatizados
 ☑️ Deploy em app stores
